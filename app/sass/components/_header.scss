@@ -1,0 +1,11 @@
+@use "./../util" as *;
+
+header {
+  padding: rem(80) 0 rem(40);
+  .container {
+    text-align: center;
+  }
+  .brand__logo {
+    display: inline-block;
+  }
+}

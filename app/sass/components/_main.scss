@@ -1,0 +1,110 @@
+@use "./../util" as *;
+
+main {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .container {
+    text-align: center;
+  }
+  h2 {
+    color: var(--gray-clr);
+    font-weight: var(--fw-300);
+    font-size: rem(40);
+    @include breakpoint(sm) {
+      font-size: rem(30);
+    }
+    span {
+      font-weight: var(--fw-600);
+      color: var(--dark-blue-clr);
+    }
+  }
+  p {
+    color: var(--dark-blue-clr-clr);
+    margin-top: rem(20);
+    margin-bottom: rem(40);
+    @include breakpoint(sm) {
+      font-size: rem(16);
+    }
+  }
+  .subscribe__form {
+    width: 100%;
+    max-width: rem(800);
+    margin: 0 auto;
+    text-align: left;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: rem(20);
+    flex-wrap: wrap;
+    @include breakpoint(sm) {
+      font-size: rem(16);
+    }
+    .input__wrapper {
+      flex: 1 0 rem(350);
+      input {
+        border: rem(2) solid var(--secondary-blue-clr);
+        padding: 0 rem(30);
+        height: rem(55);
+        font-size: inherit;
+        border-radius: rem(50);
+        color: var(--dark-blue-clr);
+        width: 100%;
+        &::placeholder {
+          color: var(--secondary-blue-clr);
+        }
+        &:focus {
+          border-color: var(--dark-blue-clr);
+        }
+        &.err {
+          border-color: var(--light-red-clr);
+        }
+      }
+      .err__txt {
+        color: var(--light-red-clr);
+        font-size: rem(16);
+        font-style: italic;
+        margin-top: rem(6);
+        text-align: center;
+        pointer-events: none;
+        margin-bottom: rem(20);
+        display: none;
+        &.show {
+          display: block;
+        }
+      }
+    }
+    .btn {
+      display: inline-block;
+      height: rem(55);
+      padding: 0 rem(60);
+      border: none;
+      font-size: inherit;
+      border-radius: rem(50);
+      font-weight: var(--fw-600);
+      box-shadow: 0 0 rem(10) var(--secondary-blue-clr);
+      transition: 0.3s ease;
+      white-space: nowrap;
+      cursor: pointer;
+      flex: 1 0 rem(150);
+      &-primary {
+        background-color: var(--primary-blue-clr);
+        color: #fff;
+        &:hover {
+          background-color: var(--secondary-blue-clr);
+        }
+      }
+    }
+  }
+  .website__illustration {
+    width: 100%;
+    max-width: rem(800);
+    margin: rem(50) auto;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}

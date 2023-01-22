@@ -1,0 +1,44 @@
+@use "./../util" as *;
+
+footer {
+  .social__media {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: rem(20);
+    padding: rem(30) 0;
+    a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: rem(40);
+      height: rem(40);
+      border: rem(2) solid var(--secondary-blue-clr);
+      border-radius: 50%;
+      color: var(--primary-blue-clr);
+      transition: 0.3s ease;
+      &:hover {
+        background-color: var(--primary-blue-clr);
+        color: #fff;
+        border-color: transparent;
+      }
+    }
+  }
+  .copyright {
+    text-align: center;
+    font-size: rem(16);
+    color: var(--gray-clr);
+  }
+  .attribution {
+    text-align: center;
+    padding: rem(20) 0;
+    color: var(--dark-blue-clr);
+    font-size: rem(18);
+    @include breakpoint(sm) {
+      font-size: rem(14);
+    }
+    a {
+      color: var(--primary-blue-clr);
+    }
+  }
+}

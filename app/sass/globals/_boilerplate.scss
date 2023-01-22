@@ -1,0 +1,43 @@
+@use "./colors" as *;
+@use "./fonts" as *;
+
+:root {
+  /* Primary color */
+  --primary-blue-clr: #{$primary-blue-clr};
+
+  /* Secondary color */
+  --secondary-blue-clr: #{$secondary-blue-clr};
+  --light-red-clr: #{$light-red-clr};
+
+  /* Neutral color */
+  --gray-clr: #{$gray-clr};
+  --dark-blue-clr: #{$dark-blue-clr};
+
+  /* Typography */
+  --font-libre: #{$font-libre};
+
+  --fs: #{$font-size};
+
+  --fw-300: #{$fw-300};
+  --fw-600: #{$fw-600};
+  --fw-700: #{$fw-700};
+}
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+input,
+button,
+textarea {
+  outline: none;
+}
+
+body {
+  font-size: var(--fs);
+  font-family: var(--font-libre);
+}
