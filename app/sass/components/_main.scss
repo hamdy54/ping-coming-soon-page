@@ -8,7 +8,7 @@ main {
   .container {
     text-align: center;
   }
-  h2 {
+  h1 {
     color: var(--gray-clr);
     font-weight: var(--fw-300);
     font-size: rem(40);
@@ -44,7 +44,7 @@ main {
     .input__wrapper {
       flex: 1 0 rem(350);
       input {
-        border: rem(2) solid var(--secondary-blue-clr);
+        border: rem(1) solid var(--secondary-blue-clr);
         padding: 0 rem(30);
         height: rem(55);
         font-size: inherit;
